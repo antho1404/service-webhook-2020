@@ -1,0 +1,12 @@
+name: Webhook
+description: Receive HTTP connections and emit events with the data
+events:
+  request:
+    data:
+      data:
+        type: Object
+      headers:
+        type: Object
+configuration:
+  ports:
+    - "3000"
