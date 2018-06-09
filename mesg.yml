@@ -7,6 +7,22 @@ events:
         type: Object
       headers:
         type: Object
+tasks:
+  call:
+    inputs:
+      url:
+        type: String
+      data:
+        type: Object
+      headers:
+        type: Object
+    outputs:
+      error:
+        data:
+          message:
+            type: String
+      result:
+        data: {}
 configuration:
   ports:
     - "3000"
