@@ -23,6 +23,7 @@ This task will call a webhook and return the result of the call
 
 #### inputs
 
+| Input | Type | Description |
 | --- | --- | --- |
 | url | String | URL that you want to call |
 | data | Object | Data the you want to send |
