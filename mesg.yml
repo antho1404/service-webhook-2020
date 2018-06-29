@@ -1,6 +1,5 @@
 name: Webhook
 description: Receive HTTP connections and emit events with the data
-repository: https://github.com/mesg-foundation/service-webhook
 events:
   request:
     description: "This even is emitted every time the server receive a `POST` request on the URL `/webhook`."
