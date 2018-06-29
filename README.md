@@ -1,36 +1,64 @@
-# Webhook Service
+# Webhook
 
+Receive HTTP connections and emit events with the data
+
+```bash
+mesg-core service deploy https://github.com/mesg-foundation/service-webhook
 ```
-mesg-core service deploy https://github.com/mesg-foundation/service-webhook.git
-```
+
 
 ## Events
 
-### Request
+### request
+
+Event key: **request**
 
 This even is emitted every time the server receive a `POST` request on the URL `/webhook`.
 
-| data | type | description |
+| **key** | **type** | **description** |
 | --- | --- | --- |
-| data | Object | All the data contained in the request data |
-| headers | Object | All the headers contained in the request |
+| **data** | `Object` | All the data contained in the request data |
+| **headers** | `Object` | All the headers contained in the request |
+
 
 ## Tasks
 
-### Call
+### call
+
+Task key: **call**
 
 This task will call a webhook and return the result of the call
 
-#### inputs
+#### Inputs
 
-| Input | Type | Description |
+| **key** | **type** | **description** |
 | --- | --- | --- |
-| url | String | URL that you want to call |
-| data | Object | Data the you want to send |
-| headers | Object | Additional headers that you want to send |
+| **data** | `Object` | Data the you want to send |
+| **headers** | `Object` | Additional headers that you want to send |
+| **url** | `String` | URL that you want to call |
 
-#### outputs
-| ouput | description |
-| --- | --- |
-| result | Result of the call |
-| error | Return the `message` if the error |
+
+#### Outputs
+
+##### error
+
+Output key: **error**
+
+Output if an error occurs
+
+| **key** | **type** | **description** |
+| --- | --- | --- |
+| **message** | `String` | Error message |
+
+##### result
+
+Output key: **result**
+
+Result of the call the returns the list of the data from the API call result
+
+| **key** | **type** | **description** |
+| --- | --- | --- |
+
+
+
+
