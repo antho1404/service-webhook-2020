@@ -1,6 +1,6 @@
 # Webhook
 
-Receive HTTP connections and emit events with the data
+Receive HTTP connections and emit events with data
 
 ```bash
 mesg-core service deploy https://github.com/mesg-foundation/service-webhook
