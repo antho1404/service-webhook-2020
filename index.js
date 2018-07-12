@@ -2,6 +2,8 @@ const MESG = require('mesg-js').service()
 const axios = require('axios')
 const bodyParser = require('body-parser')
 const app = require('express')()
+const cors = require('cors')
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
