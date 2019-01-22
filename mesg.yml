@@ -1,4 +1,3 @@
-sid: "webhook"
 name: Webhook
 sid: webhook
 description: Receive HTTP connections and emit events with the data
