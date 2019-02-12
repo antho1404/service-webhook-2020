@@ -1,5 +1,5 @@
 name: Webhook
-sid: webhook
+sid: webhook-2020
 description: Receive HTTP connections and emit events with the data
 events:
   request:
@@ -36,4 +36,4 @@ tasks:
         data: {}
 configuration:
   ports:
-    - "3000"
+    - "2020"

@@ -1,64 +1,85 @@
 # Webhook
 
-Receive HTTP connections and emit events with data
+Receive HTTP connections and emit events with the data
+
+# Contents
+
+- [Installation](#Installation)
+- [Definitions](#Definitions)
+  - [Events](#Events)
+    - [request](#request)
+  - [Tasks](#Tasks)
+    - [call](#call)
+
+# Installation
+
+## MESG Core
+
+This service requires [MESG Core](https://github.com/mesg-foundation/core) to be installed first.
+
+You can install MESG Core by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
 
 ```bash
-mesg-core service deploy https://github.com/mesg-foundation/service-webhook
+bash <(curl -fsSL https://mesg.com/install)
 ```
 
+## Service
 
-## Events
+Download the source code of this service, and then in the service's folder, run the following command:
+```bash
+mesg-core service deploy
+```
 
-### request
+# Definitions
 
-Event key: **request**
+# Events
+
+## request
+
+Event key: `request`
 
 This even is emitted every time the server receive a `POST` request on the URL `/webhook`.
 
-| **key** | **type** | **description** |
-| --- | --- | --- |
-| **data** | `Object` | All the data contained in the request data |
-| **headers** | `Object` | All the headers contained in the request |
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **data** | `data` | `Object` | All the data contained in the request data |
+| **headers** | `headers` | `Object` | All the headers contained in the request |
 
+# Tasks
 
-## Tasks
+## call
 
-### call
-
-Task key: **call**
+Task key: `call`
 
 This task will call a webhook and return the result of the call
 
-#### Inputs
+### Inputs
 
-| **key** | **type** | **description** |
-| --- | --- | --- |
-| **data** | `Object` | Data the you want to send |
-| **headers** | `Object` | Additional headers that you want to send |
-| **url** | `String` | URL that you want to call |
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **data** | `data` | `Object` | Data the you want to send |
+| **headers** | `headers` | `Object` | Additional headers that you want to send |
+| **url** | `url` | `String` | URL that you want to call |
 
+### Outputs
 
-#### Outputs
+#### error
 
-##### error
-
-Output key: **error**
+Output key: `error`
 
 Output if an error occurs
 
-| **key** | **type** | **description** |
-| --- | --- | --- |
-| **message** | `String` | Error message |
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **message** | `message` | `String` | Error message |
 
-##### result
+#### result
 
-Output key: **result**
+Output key: `result`
 
 Result of the call the returns the list of the data from the API call result
 
-| **key** | **type** | **description** |
-| --- | --- | --- |
-
-
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
 
 
