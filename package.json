@@ -6,10 +6,10 @@
   "author": "Anthony Estebe <anthony@mesg.tech>",
   "license": "ISC",
   "dependencies": {
+    "@liteflow/service": "^1.0.7",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "mesg-js": "^2.0.0"
+    "express": "^4.16.3"
   }
 }

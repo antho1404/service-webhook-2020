@@ -1,4 +1,4 @@
-const MESG = require('mesg-js').service()
+const MESG = new (require('@liteflow/service'))()
 const axios = require('axios')
 const bodyParser = require('body-parser')
 const app = require('express')()
